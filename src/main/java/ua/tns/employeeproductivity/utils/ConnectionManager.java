@@ -9,11 +9,11 @@ public class ConnectionManager {
     private static final String USERNAME_KEY = "db.username";
     private static final String PASSWORD_KEY = "db.password";
 
-    private ConnectionManager() {
-    }
-
     static {
         loadDriver();
+    }
+
+    private ConnectionManager() {
     }
 
     public static Connection open() {
