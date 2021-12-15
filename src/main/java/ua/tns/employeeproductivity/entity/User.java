@@ -1,4 +1,4 @@
-package ua.tns.employeeproductivity.models;
+package ua.tns.employeeproductivity.entity;
 
 public class User {
     private long id;

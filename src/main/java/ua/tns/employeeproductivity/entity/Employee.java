@@ -1,4 +1,4 @@
-package ua.tns.employeeproductivity.models;
+package ua.tns.employeeproductivity.entity;
 
 import lombok.Builder;
 import lombok.Data;

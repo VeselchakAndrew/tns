@@ -1,6 +1,6 @@
 package ua.tns.employeeproductivity.dao.employee;
 
-import ua.tns.employeeproductivity.models.Employee;
+import ua.tns.employeeproductivity.entity.Employee;
 
 import java.util.List;
 
