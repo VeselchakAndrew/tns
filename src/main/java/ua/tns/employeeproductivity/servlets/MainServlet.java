@@ -17,18 +17,18 @@ import java.util.stream.Collectors;
 @WebServlet("/")
 public class MainServlet extends HttpServlet {
 
-    private String companyName = "Company";
-    private final EmployeeDAO employeeDAO = new EmployeeDAO();
-    private final Set<String> departments = employeeDAO.getAllEmployees().stream()
-            .map(Employee::getDepartment).collect(Collectors.toSet());
-
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("companyName", companyName);
-        req.setAttribute("departments", departments);
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("/views/Main.jsp");
-        requestDispatcher.forward(req, resp);
-    }
+//    private String companyName = "Company";
+//    private final EmployeeDAO employeeDAO = new EmployeeDAO();
+//    private final Set<String> departments = employeeDAO.getAllEmployees().stream()
+//            .map(Employee::getDepartment).collect(Collectors.toSet());
+//
+//    @Override
+//    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+//        req.setAttribute("companyName", companyName);
+//        req.setAttribute("departments", departments);
+//        RequestDispatcher requestDispatcher = req.getRequestDispatcher("/views/Main.jsp");
+//        requestDispatcher.forward(req, resp);
+//    }
 
 
 }

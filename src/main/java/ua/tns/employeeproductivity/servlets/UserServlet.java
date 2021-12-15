@@ -12,11 +12,11 @@ import java.io.IOException;
 
 @WebServlet("/employee")
 public class UserServlet extends HttpServlet {
-    private final EmployeeDAO employeeDAO = new EmployeeDAO();
+//    private final EmployeeDAO employeeDAO = new EmployeeDAO();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("employees", employeeDAO.getAllEmployees());
+//        req.setAttribute("employees", employeeDAO.getAllEmployees());
         RequestDispatcher dispatcher = req.getRequestDispatcher("/views/Employee.jsp");
         dispatcher.forward(req, resp);
     }

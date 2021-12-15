@@ -9,6 +9,8 @@ interface IEmployeeDAO {
 
     Employee getEmployeeById(long id);
 
+    Employee getEmployeeByDepartment(Long departmentId);
+
     Employee updateEmployee(Employee employee);
 
     boolean saveEmployeeToDB(Employee employee);
