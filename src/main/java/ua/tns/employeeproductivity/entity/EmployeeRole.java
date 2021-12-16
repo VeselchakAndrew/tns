@@ -1,8 +1,17 @@
 package ua.tns.employeeproductivity.entity;
 
-public enum EmployeeRole {
-    HEAD_OF_DEPARTMENT,
-    SENIOR_SPECIALIST,
-    MIDDLE_SPECIALIST,
-    JUNIOR_SPECIALIST
+import lombok.*;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@ToString
+public class EmployeeRole {
+    private long id;
+    private String roleName;
+
+    public EmployeeRole(long id) {
+        this.id = id;
+    }
 }

@@ -1,28 +1,32 @@
-import org.postgresql.Driver;
-import ua.tns.employeeproductivity.utils.ConnectionManager;
+import ua.tns.employeeproductivity.bean.ProductivityBean;
+import ua.tns.employeeproductivity.dao.EmployeeDAO;
+import ua.tns.employeeproductivity.entity.Employee;
 
-import java.sql.Connection;
 import java.sql.SQLException;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.util.List;
+import java.util.Optional;
 
 
 public class App {
     public static void main(String[] args) throws SQLException {
-        Class<Driver> driverClass = Driver.class;
-        String SQL = """
-                SELECT * FROM test;
-                                """;
-        try (Connection connection = ConnectionManager.open();
-             Statement statement = connection.createStatement()) {
-            System.out.println(connection.getTransactionIsolation());
-//            boolean execute = statement.execute(SQL);
-            ResultSet executeResult = statement.executeQuery(SQL);
+//        EmployeeDAO instance = EmployeeDAO.getInstance();
+//        Optional<Employee> employee = instance.findById(2L);
+//        System.out.println(employee);
 
-            while (executeResult.next()) {
-                System.out.println(executeResult.getInt("id") + " " + executeResult.getString("data"));
+        List<Double> prod = List.of(
+                new ProductivityBean().employeeProductivity(0),
+                new ProductivityBean().employeeProductivity(-1),
+                new ProductivityBean().employeeProductivity(1),
+                new ProductivityBean().employeeProductivity(-2),
+                new ProductivityBean().employeeProductivity(4),
+                new ProductivityBean().employeeProductivity(2)
+        );
+        System.out.println(prod);
 
-            }
-        }
+
+//        List<Employee> all = instance.findAll();
+//        for (Employee value : all) {
+//            System.out.println(value);
+//        }
     }
 }

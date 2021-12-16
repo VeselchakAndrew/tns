@@ -5,5 +5,5 @@ import java.util.List;
 public class Company {
     private long id;
     private String name;
-    private List<Department> departments;
+    private List<Long> departmentsId;
 }

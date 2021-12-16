@@ -17,12 +17,12 @@
     <p>Employees efficiency</p>
     <p>for company ${companyName}</p>
 </div>
-<p>Общая эффективность: </p>
+<p>Общая эффективность: ${totalProductivity}</p>
 <div>
     <p>Эффективность по отделам</p>
     <select name="departments" id="departments">
         <c:forEach items="${departments}" var="departments">
-            <option><c:out value="${departments}" /></option>
+            <option><c:out value="${departments}"/></option>
         </c:forEach>
     </select>
     <button onclick="">Показать</button>
